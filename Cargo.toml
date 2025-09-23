@@ -1,0 +1,17 @@
+[package]
+name = "dual_cert"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "dual_cert"
+path = "src/dual_cert.rs"
+
+[dependencies]
+actix-web = { version = "4.4", features = ["openssl"] }
+openssl = "0.10.68"
+openssl-sys = "0.9"
+tokio = { version = "1.0", features = ["full"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+env_logger = "0.10"
